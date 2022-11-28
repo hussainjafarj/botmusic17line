@@ -52,6 +52,40 @@ i18n.configure({
   }
 });
 
+///ممنوع السرقة 
+client.login("OTkwMzMyODU4ODE0MDY2NzI5.GhmD9W.3SbhWksEwjdkpZDyw6trE4xw6Ca9ANhB3wp8GI"); ///توكن هنا
+
+client.on("ready", () => {
+  client.user.setActivity(``)//غير الحالة الي تريد
+});
+
+client.on("message", async message => {
+ 
+  if (message.guild.id != "929497213674082304" ) return;
+  if (message.channel.id != "948592282242809856") return;    
+  if(message.author.id === client.user.id) return;
+      if (message.author.send) {
+    message.channel.send({files: ["https://cdn.discordapp.com/attachments/916668502109196328/948898483153293362/5cfece8f1d8d345e.png"]});
+ 
+  }
+ 
+});
+client.on('message', message => {
+  if (message.content === 'خط') {
+    message.delete();
+ message.channel.send({files: ["https://media.discordapp.net/attachments/983386931209580584/1044622350185938954/FB653D8B-87EC-4A34-A8C5-678FBE3305E0.png"]});
+
+  }
+})
+
+// Code Auto Line
+client.on("message", message => {
+if(message.author.bot) return;
+if(message.channel.id == "983386833482309652") { /// اي دي روم الخط
+message.channel.send("https://media.discordapp.net/attachments/983386931209580584/1044622350185938954/FB653D8B-87EC-4A34-A8C5-678FBE3305E0.png") /// رابط الخط
+} else { return; }
+})
+
 /**
  * Client Events
  */
